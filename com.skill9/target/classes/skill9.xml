@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id='patient' class='com.klu.com.skill9.Patient'>
+		<property name='fullname' value='Ravi'></property>
+		<property name='age' value='30'></property>
+		<property name='gender' value='male'></property>
+		<property name='previoushealthissue' value='Malaria'></property>
+		<property name='address' value='Ongole'></property>
+	</bean>
+	<!-- 190030061 -->
+	<bean id='doctor' class='com.klu.com.skill9.Doctor'>
+		<property name='fullname' value='Satyanarayana'></property>
+		<property name='age' value='50'></property>
+		<property name='gender' value='male'></property>
+		<property name='graduationdetails' value='MBBS'></property>
+		<property name='address' value='Kavali'></property>
+	</bean>
+	
+	<bean id='prescription' class='com.klu.com.skill9.Prescription'>
+		<property name='patient' ref='patient'></property>
+		<property name='doctor' ref='doctor'></property> 
+	</bean>
+</beans>
